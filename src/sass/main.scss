@@ -1,0 +1,45 @@
+
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+
+  //media quries in series
+  @include respond(tab-land) {
+    //max-width(1200px)
+    font-size: 56.25%; //1rem = 9px
+  }
+  @include respond(tab-prot) {
+    //max-width(950px)
+    font-size: 50%; //1rem = 8rem
+  }
+  @include respond(desk) {
+    //min-width(1900px)
+    font-size: 75%; //1rem = 12px
+  }
+  @include respond(bg-desk) {
+    //min-width(1600px)
+    font-size: 87.5%; //1rem = 14px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.wraper {
+  position: absolute;
+  width: 100vw;
+  overflow-x: hidden;
+}

@@ -1,0 +1,72 @@
+
+/*clearfix*/
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/*
+bg-desktop  - 1900px and up       -min-width(118.75em)      1900px/16   118.75em
+desktop     - 1600px and up       -min-width(100em)         1600px/16   100em
+laptop      - 1200px and up
+tab-land    - 950px and up        -max-width(75em)          1200px/16   75em
+tab-prot    - 700px and up        -max-width(59.375em)      950px/16    59.375em
+phone-land  - 400px and up        -max-width(43.75em)       700px/16    43.75em
+phone-prot  - 400px and down      -max-width(28.125em)      450px/16    28.125em
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == bg-desk {
+    @media only screen and (min-width: 118.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desk {
+    @media only screen and (min-width: 100em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-prot {
+    @media only screen and (max-width: 59.375em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-land {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-prot {
+    @media only screen and (max-width: 28.125em) {
+      @content;
+    }
+  }
+}
+
+/*
+
+@include respond(tab-land) {        //900px to 1200px max-width(75em)
+}
+@include respond(tab-prot) {        //700px to 900px max-width(59.375em)
+}
+@include respond(phone-land) {      //400px to 700px max-width(43.75em)
+}
+@include respond(phone-prot) {      //0px to 400px max-width(28.125em)
+}
+@include respond(desk) {            //1600px - 2000px min-width(100em) 
+}
+@include respond(bg-desk) {         //2000px and up min-width(118.75em)
+}
+
+
+*/
