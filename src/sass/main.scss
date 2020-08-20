@@ -1,5 +1,11 @@
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,400&display=swap");
 
-@import 'mixins';
+$color-white: #fcfcff;
+$color-offWhite: #f6f7fa;
+$color-lightDark: #989b9e;
+$color-darkGrey: #595c5f;
+$color-dark: #393e41;
 
 * {
   margin: 0;
@@ -36,10 +42,41 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
+  font-family: "Open Sans", sans-serif;
+  background-color: $color-offWhite;
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .wraper {
   position: absolute;
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  box-shadow: 0 5px 10px rgba($color-dark, 0.2);
+  margin: 1rem 2rem 1.5rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    background-color: blue;
+    color: $color-white;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  margin-left: 1rem;
 }

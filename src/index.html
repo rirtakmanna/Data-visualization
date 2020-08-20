@@ -1,18 +1,98 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- link css file -->
-    <link rel='stylesheet' href='./sass/main.scss' />
+    <link rel="stylesheet" href="./sass/main.scss" />
 
     <!-- link js file -->
-    <script src='./js/app.js' defer></script>
+    <script src="./js/app.js" defer></script>
 
-    <title>Drashboad | Control Pannel</title>
+    <title>Control Center</title>
   </head>
   <body>
-  <div class='wraper'></div>
+    <!-- wraper for all item insited body -->
+    <div class="wraper">
+      <div class="container">
+        <div class="container__left">
+          <!-- Chart -->
+          <div class="card">
+            <!-- chart Header -->
+            <div class="card__header">
+              <h3 class="card__header--tittle">CPU Usage</h3>
+              <div class="card__header--button">
+                <img
+                  src="./assets/icon/remove-outline.svg"
+                  alt="Remove"
+                  class="show icon"
+                />
+                <img
+                  src="./assets/icon/close-outline.svg"
+                  alt="close"
+                  class="close icon"
+                />
+              </div>
+            </div>
+
+            <!-- chart body -->
+            <div class="card__body">
+              <div class="chart">
+                <canvas
+                  class="chart"
+                  data-graph="line"
+                  data-JSON="cpu"
+                  style="
+                    min-height: 250px;
+                    height: 250px;
+                    max-height: 250px;
+                    max-width: 100%;
+                  "
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container__right">
+          <!-- Chart -->
+          <div class="card">
+            <!-- chart Header -->
+            <div class="card__header">
+              <h3 class="card__header--tittle">CPU Usage</h3>
+              <div class="card__header--button">
+                <img
+                  src="./assets/icon/remove-outline.svg"
+                  alt="Remove"
+                  class="show icon"
+                />
+                <img
+                  src="./assets/icon/close-outline.svg"
+                  alt="close"
+                  class="close icon"
+                />
+              </div>
+            </div>
+
+            <!-- chart body -->
+            <div class="card__body">
+              <div class="chart">
+                <canvas
+                  class="chart"
+                  data-graph="doughnut"
+                  data-JSON="ram"
+                  style="
+                    min-height: 250px;
+                    height: 250px;
+                    max-height: 250px;
+                    max-width: 100%;
+                  "
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

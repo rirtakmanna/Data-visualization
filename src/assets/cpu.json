@@ -1,0 +1,4 @@
+{
+  "labels": ["Chrome", "IE", "FireFox", "Safari", "Opera", "Navigator"],
+  "data": [700, 500, 400, 600, 300, 100]
+}
