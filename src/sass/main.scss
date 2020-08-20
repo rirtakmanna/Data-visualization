@@ -59,6 +59,11 @@ body {
   justify-content: space-around;
   width: 100%;
 
+  @include respond(tab-prot) {
+    //700px to 900px max-width(59.375em)
+    flex-direction: column;
+  }
+
   &__left {
     display: flex;
     width: 45%;

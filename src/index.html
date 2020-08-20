@@ -16,11 +16,13 @@
     <!-- wraper for all item insited body -->
     <div class="wraper">
       <div class="container">
-        <div class="container__left" id="left">
+        <!-- Add graph in left side or right side -->
+        <div class="container__left">
+          <!-- Copy whole card component as more aand more graph add -->
           <!-- Chart -->
           <div class="card">
             <!-- chart Header -->
-            <div class="card__header" style="background-color:#008DD5;">
+            <div class="card__header" style="background-color: #008dd5;">
               <h3 class="card__header--tittle">CPU Usage</h3>
               <div class="card__header--button">
                 <img
@@ -39,6 +41,9 @@
             <!-- chart body -->
             <div class="card__body">
               <div class="chart">
+                <!-- data-graph = type of graph you want -->
+                <!-- data-JSON = File name -->
+                <!-- data-label = Put label in it -->
                 <canvas
                   class="chart"
                   data-graph="line"
@@ -59,7 +64,7 @@
           <!-- Chart -->
           <div class="card">
             <!-- chart Header -->
-            <div class="card__header" style="background-color: #1B998B;">
+            <div class="card__header" style="background-color: #1b998b;">
               <h3 class="card__header--tittle">Ram Usage</h3>
               <div class="card__header--button">
                 <img
