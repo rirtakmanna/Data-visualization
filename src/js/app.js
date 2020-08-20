@@ -18,6 +18,7 @@ function loadJSON(url, callback) {
 var canvas = document.getElementsByTagName("canvas");
 Array.prototype.forEach.call(canvas, (chart) => {
   var type = `${chart.getAttribute("data-graph")}`;
+  // Varify the path for json
   var dataJSON = `./${chart.getAttribute("data-JSON")}.json`;
   var lebel = `${chart.getAttribute("data-label")}`;
   lebel = lebel.split(",");

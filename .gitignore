@@ -4,7 +4,6 @@
 package-lock.json
 .cache
 /dist
-/build
 /node_modules
 /.pnp
 .pnp.js
